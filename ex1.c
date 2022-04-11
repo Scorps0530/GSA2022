@@ -12,9 +12,10 @@ void main() {
 	scanf("%d", &pay);
 
 	change = pay - price;
+
 	printf("만원권 : %d장\n", change / 10000);
 	printf("오천원권 : %d장\n", change % 10000 / 5000);
 	printf("천원권 : %d장\n", change % 5000 / 1000);
-	printf("오백원권 : %d장\n", change % 1000 / 500);
-	printf("백원권 : %d장\n", change % 500 / 100);
+	printf("오백원 : %d개\n", change % 1000 / 500);
+	printf("백원 : %d개\n", change % 500 / 100);
 }

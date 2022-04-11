@@ -18,5 +18,20 @@
     <ClCompile Include="ex1.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="ex2.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="ex3.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="ex4.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="ex5.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="test.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
