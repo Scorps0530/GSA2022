@@ -35,9 +35,9 @@ int main() {
 
 	// 가위바위보 게임
 	// 가위 : 0, 바위 : 1, 보:2 로 설정
-	short pRSP, cRSP;
+	int pRSP, cRSP;
 	
-	printf("가위 : 0, 바위 : 1, 보 : 2 중 하나 입력해주세요. >> "); scanf("%hd", &pRSP);
+	printf("가위 : 0, 바위 : 1, 보 : 2 중 하나 입력해주세요. >> "); scanf("%d", &pRSP);
 	
 	srand(time(NULL));
 	cRSP = (rand() % 3);
@@ -49,7 +49,7 @@ int main() {
 		break;
 	case 1:
 		printf("이겼습니다.\n");
-		break;
+		break;		
 	case 2:
 		printf("졌습니다.\n");
 		break;

@@ -30,7 +30,10 @@
     <ClCompile Include="ex5.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="test.cpp">
+    <ClCompile Include="ExamPrac1_ex1to5.cpp">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="ex6.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>
