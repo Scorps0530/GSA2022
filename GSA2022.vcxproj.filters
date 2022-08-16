@@ -36,5 +36,26 @@
     <ClCompile Include="ex6.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
+    <ClCompile Include="ex7_1.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="ex7_2.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="ex8.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="ExamPrac2.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="temp.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="ExamPrac3_ex6to8.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="ExamPrac4.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
   </ItemGroup>
 </Project>
