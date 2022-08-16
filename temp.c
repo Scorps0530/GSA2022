@@ -1,85 +1,40 @@
-// 정렬 -> selection sort, bubble sort,	insertion sort, shell sort
-
+#include <stdio.h>
 #pragma warning(disable:4996)
 
-#include <stdio.h>
+#define SIZE 16
 
-#define SIZE 5
+void binary_search(int arr[], int start, int end, int key);
 
-void selection_sort(int arr[], int size);
-void bubble_sort(int arr[], int size);
-void insertion_sort(int arr[], int size);
-void print_array(int arr[], int size);
+int main()
+{
+	int key, i;
+	int list[SIZE] = { 2,6,11,13,18,20,22,27,29,30,34,38,41,42,45,47 };
 
-void main() {
-	int a[SIZE] = { 1, 4, 5, 3, 2 };
-	//selection_sort(a, SIZE);
-	//bubble_sort(a, SIZE);
-	insertion_sort(a, SIZE);
-	print_array(a, SIZE);
+	printf("탐색할 값을 입력하시오: ");
+	scanf("%d", &key);
+
+	// 순차탐색
+	for (int i = 0; i < SIZE; i++)
+		if (list[i] == key)
+			printf("탐색 성공 인덱스 = %d\n", i);
+	printf("탐색 종료\n");
+
+	// 이진탐색 실행
+	binary_search(list, 0, SIZE - 1, key);
+
+	return 0;
 }
 
-
-// 정렬
-
-// 선택 정렬
-void selection_sort(int arr[], int size)
+// 이진탐색
+void binary_search(int arr[], int start, int end, int key)
 {
-	for (int i = 0; i < size - 1; i++)
-	{
-		int least = i;
-		for (int j = i; j < size; j++)
-			if (arr[j] < arr[least])
-				least = j;
-		int temp = arr[i];
-		arr[i] = arr[least];
-		arr[least] = temp;
+	printf("[%d %d]\n", start, end);
+	int mid = (start + end) / 2;
 
-		print_array(arr, size);
-		printf("\n");
-	}
-}
-
-// 버블 정렬
-void bubble_sort(int arr[], int size)
-{
-	for (int i = 0; i < size; i++) {
-		for (int j = 0; j < size - i - 1; j++) {
-			if (arr[j] > arr[j + 1]) {
-				int temp = arr[j];
-				arr[j] = arr[j + 1];
-				arr[j + 1] = temp;
-			}
-			print_array(arr, size);
-			printf("\n");
-		}
-		printf("\n");
-	}
-}
-
-// 삽입 정렬
-void insertion_sort(int arr[], int size)
-{
-	for (int i = 1; i < size; i++)
-	{
-		int j;
-		int key = arr[i];
-		for (j = i - 1; j >= 0 && arr[j] > key; j--)
-		{
-			arr[j + 1] = arr[j];
-
-			print_array(arr, size);
-			printf("\n");
-		}
-		arr[j + 1] = key;
-
-		print_array(arr, size);
-		printf("\n\n");
-	}
-}
-
-void print_array(int array[], int size)
-{
-	for (int i = 0; i < size; i++)
-		printf("%d ", array[i]);
+	if (arr[mid] == key)
+		printf("탐색 결과 = %d", mid);
+	else if (key < arr[mid])
+		binary_search(arr, start, mid - 1, key);
+	else
+		binary_search(arr, mid + 1, end, key);
 }
