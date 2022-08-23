@@ -1,3 +1,5 @@
+// 함수, 재귀함수
+
 #include <stdio.h>
 #pragma warning(disable:4996)
 
