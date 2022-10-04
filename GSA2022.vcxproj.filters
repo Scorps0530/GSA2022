@@ -66,10 +66,25 @@
     <ClCompile Include="ex11.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
-    <ClCompile Include="ExamPrac5_ex7to.c">
+    <ClCompile Include="ExamPrac5_ex9to.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
     <ClCompile Include="ex12.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="ex13.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="ex14.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="ex15.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="ex16.c">
+      <Filter>소스 파일</Filter>
+    </ClCompile>
+    <ClCompile Include="ex17.c">
       <Filter>소스 파일</Filter>
     </ClCompile>
   </ItemGroup>

@@ -18,7 +18,7 @@ int main() {
 	// 문자열 복사 - 포인터
 	// memory allocation -> malloc
 	// 메모리 동적 할당
-	char* s4 = malloc(sizeof(char) * 20); // 포인터로 정의된 문자열은 읽기 전용. char* s2 후 strcpy 하면 오류.
+	char* s4 = (char*)malloc(sizeof(char) * 20); // 포인터로 정의된 문자열은 읽기 전용. char* s2 후 strcpy 하면 오류.
 	strcpy(s4, s2);
 	printf("%s\n", s4);
 	free(s4);
@@ -29,7 +29,7 @@ int main() {
 	printf("%s\n", s5);
 
 	// 문자열 붙이기 - 포인터
-	char* s7 = malloc(sizeof(char) * 20);
+	char* s7 = (char*)malloc(sizeof(char) * 20);
 	strcpy(s7, "Hello, ");
 	char* s8 = "World!";
 	strcat(s7, s8);
