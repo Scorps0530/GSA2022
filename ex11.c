@@ -16,7 +16,6 @@ int main() {
 			board[i][j] = ' ';
 
 	int turn = 1;
-	char key = 'O';
 
 	print_board(board);
 

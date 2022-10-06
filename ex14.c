@@ -22,8 +22,7 @@ int count_word(char* s)
 
 int main() {
 	// 문자열 단어 카운트
-	int w = count_word("abc ab a a abcd!!");
-	printf("%d\n", w);
+	printf("%d\n", count_word("abc ab a a abcd!!"));
 
 	int a;
 	while ((a = getchar()) != EOF) // EOF -> Ctrl + Z
@@ -37,5 +36,5 @@ int main() {
 	int b = strcmp("dog", "dog"); // 0 반환
 	int c = strcmp("dog", "cat"); // 1 반환
 	int e = strcmp("cat", "dog"); // -1 반환
-
+	printf("%d %d %d\n", b, c, e);
 }

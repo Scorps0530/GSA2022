@@ -28,6 +28,7 @@ int main() {
 				break;
 			}
 		}
+		free(p);
 	}
 	printf("%d\n", count);
 }

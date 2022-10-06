@@ -34,5 +34,6 @@ int main() {
 	char* s8 = "World!";
 	strcat(s7, s8);
 	printf("%s\n", s7);
+	free(s7);
 
 }

@@ -1,33 +1,40 @@
 #pragma warning(disable:4996)
 #include <stdio.h>
-#include <stdlib.h>
-#include <ctype.h>
 
-int main() {
-	// 스크린처럼 출력하기
-	/*
-	char str[] = "Hello, World! ";
-	for (int i = 0; i < 100; i++) {
+#include <ctype.h> // 문자 처리 라이브러리
 
-		system("cls");
-		for (int j = 0; j < strlen(str); j++)
-			printf("%c", str[(j + i) % strlen(str)]);
-		Sleep(100);
-	}
-	*/
-
-	// 문자열 n개 입력 -> 묶음단어 개수 출력하기
-	int n; scanf("%d", &n);
-	int count = 0;
-	for (int i = 0; i < n; i++) {
-		char* p = (char*)(malloc(sizeof(char) * 64));
-		scanf("%s", p);
-		for (int j = 0; j < strlen(p); j++) {
-			if (p[j] == p[j + 1]) {
-				count++;
-				break;
+int count_word(char* s)
+{
+	int wc = 0, waiting = 1;
+	for (int i = 0; s[i] != '\0'; i++)
+		if (isalpha(s[i])) // 문자가 있는가?
+		{
+			if (waiting)
+			{
+				wc++;
+				waiting = 0;
 			}
 		}
+		else
+			waiting = 1;
+	return wc;
+}
+
+int main() {
+	// 문자열 단어 카운트
+	printf("%d\n", count_word("abc ab a a abcd!!"));
+
+	int a;
+	while ((a = getchar()) != EOF) // EOF -> Ctrl + Z
+	{
+		if (islower(a))
+			a = toupper(a);
+		putchar(a);
 	}
-	printf("%d\n", count);
+
+
+	int b = strcmp("dog", "dog"); // 0 반환
+	int c = strcmp("dog", "cat"); // 1 반환
+	int e = strcmp("cat", "dog"); // -1 반환
+	printf("%d %d %d\n", b, c, e);
 }
